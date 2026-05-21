@@ -17,7 +17,7 @@ function Settings({ browser, setBrowser, defaultQuality, setDefaultQuality, defa
     <div className="app">
       <div className="titlebar">
         <button className="back-btn" onClick={onBack} aria-label="Back">←</button>
-        <span className="logo">St<span className="logo-a">▶</span>sh</span>
+        <img src="/src/assets/Stash_logo2.png" alt="Stash" className="titlebar-logo-img" />
         <div className="titlebar-spacer" />
       </div>
 

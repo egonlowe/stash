@@ -327,7 +327,7 @@ function App() {
     <div className="app">
       <div className="titlebar">
         <div className="titlebar-spacer" />
-        <span className="logo">St<span className="logo-a">▶</span>sh</span>
+        <img src="/src/assets/Stash_logo2.png" alt="Stash" className="titlebar-logo-img" />
         <div className="titlebar-right">
           <button className="gear-btn" onClick={() => setShowSettings(true)} aria-label="Settings">⚙️</button>
         </div>

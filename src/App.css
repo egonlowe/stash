@@ -437,3 +437,8 @@ body {
 .gear-btn:hover {
   opacity: 1;
 }
+
+.titlebar-logo-img {
+  height: 28px;
+  object-fit: contain;
+}
