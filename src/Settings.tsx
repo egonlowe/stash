@@ -1,3 +1,4 @@
+import stashLogo from "./assets/Stash_logo2.png";
 import "./Settings.css";
 
 interface SettingsProps {
@@ -17,7 +18,7 @@ function Settings({ browser, setBrowser, defaultQuality, setDefaultQuality, defa
     <div className="app">
       <div className="titlebar">
         <button className="back-btn" onClick={onBack} aria-label="Back">←</button>
-        <img src="/src/assets/Stash_logo2.png" alt="Stash" className="titlebar-logo-img" />
+        <img src={stashLogo} alt="Stash" className="titlebar-logo-img" />
         <div className="titlebar-spacer" />
       </div>
 

@@ -1,0 +1,92 @@
+.setup {
+  position: fixed;
+  inset: 0;
+  background: #1a1f3d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9998;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.setup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 380px;
+  padding: 0 24px;
+}
+
+.setup-logo-img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 24px;
+}
+
+.setup-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 12px;
+  letter-spacing: 0.01em;
+}
+
+.setup-desc {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.setup-select {
+  width: 240px;
+  height: 38px;
+  padding: 0 12px;
+  font-size: 13px;
+  font-family: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.setup-select:focus {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.setup-button {
+  width: 240px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  border: none;
+  border-radius: 6px;
+  background: #fff;
+  color: #1a1f3d;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.setup-button:hover {
+  opacity: 0.9;
+}
+
+.setup-button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.setup-credit {
+  position: absolute;
+  bottom: 24px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.06em;
+}

@@ -4,6 +4,7 @@ import { load } from "@tauri-apps/plugin-store";
 import { useState, useEffect, useRef } from "react";
 import { open, message } from "@tauri-apps/plugin-dialog";
 import Settings from "./Settings";
+import stashLogo from "./assets/Stash_logo2.png";
 import "./App.css";
 
 interface QueueItem {
@@ -327,7 +328,7 @@ function App() {
     <div className="app">
       <div className="titlebar">
         <div className="titlebar-spacer" />
-        <img src="/src/assets/Stash_logo2.png" alt="Stash" className="titlebar-logo-img" />
+        <img src={stashLogo} alt="Stash" className="titlebar-logo-img" />
         <div className="titlebar-right">
           <button className="gear-btn" onClick={() => setShowSettings(true)} aria-label="Settings">⚙️</button>
         </div>
