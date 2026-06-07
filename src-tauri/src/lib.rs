@@ -38,6 +38,9 @@ fn open_file_location(file_path: String) -> Result<(), String> {
 fn start_download(app: AppHandle, id: String, url: String, quality: String, format: String, codec: String, save_path: String, browser: String) {
     std::thread::spawn(move || {
         let save_path = expand_tilde(&save_path);
+        if let Err(e) = std::fs::create_dir_all(&save_path) {
+            println!("ERROR: Failed to create save directory: {}", e);
+        }
         let format_arg = if quality == "Audio only" || ["mp3", "aac", "flac", "wav"].contains(&format.to_lowercase().as_str()) {
             "bestaudio".to_string()
         } else {
