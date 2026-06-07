@@ -291,6 +291,12 @@ function App() {
       queueRef.current = updatedQueue;
       setQueue(updatedQueue);
 
+      // Start download immediately — don't wait for title
+      if (!isDownloading.current) {
+        invokeDownload(newItem);
+      }
+
+      // Fetch title in background after download has already started
       invoke<string>("fetch_title", { url: trimmedUrl, browser: browserRef.current })
         .then((title) => {
           if (title) {
@@ -299,12 +305,7 @@ function App() {
             );
           }
         })
-        .catch(() => {})
-        .finally(() => {
-          if (!isDownloading.current) {
-            invokeDownload(newItem);
-          }
-        });
+        .catch(() => {});
     }
   }
 
